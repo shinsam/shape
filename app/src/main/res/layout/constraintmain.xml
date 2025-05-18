@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/textView01"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="같은 모양 찾기 게임"
+        android:textColor="#558B2F"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView02"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="모양을 선택하세요"
+        android:textColor="#DC1AE3"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView01" />
+
+    <ImageView
+        android:id="@+id/imageCircle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toStartOf="@id/imageSquare"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView02"
+        app:srcCompat="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/imageSquare"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageCircle"
+        app:layout_constraintTop_toBottomOf="@+id/textView02"
+        app:srcCompat="@drawable/square" />
+
+    <RadioGroup
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/imageSquare"
+        app:layout_constraintStart_toStartOf="@id/imageCircle"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/imageCircle">
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="CIRCLE"
+            android:layout_weight="1"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SQUARE"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </RadioGroup>
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="180dp" />
+
+    <ImageView
+        android:id="@+id/imageResult01"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/dog01"
+        app:layout_constraintTop_toTopOf="@id/guideline"
+        app:layout_constraintBottom_toBottomOf="@id/guideline"
+        app:layout_constraintEnd_toStartOf="@id/imageResult02"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        android:background="#AEEFF8"
+        />
+
+    <ImageView
+        android:id="@+id/imageResult02"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/dog02"
+        app:layout_constraintTop_toTopOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guideline"
+        android:background="#AEEFF8"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/imageResult01"/>
+
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="결과"
+        android:textStyle="bold"
+        android:textColor="#F44336"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/imageCircle"
+        app:layout_constraintEnd_toEndOf="@id/imageSquare"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        android:layout_marginTop="70dp"
+        />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="@+id/textViewResult"
+        app:layout_constraintStart_toStartOf="@+id/textViewResult"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult"
+        app:srcCompat="@drawable/button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
