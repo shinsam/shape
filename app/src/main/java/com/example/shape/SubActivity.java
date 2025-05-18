@@ -124,10 +124,10 @@ public class SubActivity extends AppCompatActivity implements View.OnClickListen
         count ++;
         if(count==2){
 
-            if(CorrectCount == 2)
-                Toast.makeText(this, "정답입니다.", Toast.LENGTH_SHORT).show();
-            else
-                Toast.makeText(this, "오답입니다.", Toast.LENGTH_SHORT).show();
+//            if(CorrectCount == 2)
+//                Toast.makeText(this, "정답입니다.", Toast.LENGTH_SHORT).show();
+//            else
+//                Toast.makeText(this, "오답입니다.", Toast.LENGTH_SHORT).show();
 
         }else if(count>=2){
             Toast.makeText(this, "기회는 2번 입니다", Toast.LENGTH_SHORT).show();
